@@ -12,7 +12,7 @@ export function Footer() {
             </p>
             <p>Residential remodeling, carpentry & handyman services</p>
             <p className="text-[11px] text-stone-600">
-              Serving the St. Louis area
+              Serving the Midwest U.S.A.
             </p>
           </div>
 

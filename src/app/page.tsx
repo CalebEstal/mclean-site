@@ -1,81 +1,14 @@
 import { FeatureCard } from "@/components/FeatureCard";
 import Image from "next/image";
 import { projects } from "@/lib/projects";
+import { Hero } from "@/components/Hero";
 
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         {/* Hero */}
-        <section className="border-b border-stone-300 bg-gradient-to-b from-stone-100 to-stone-200">
-          <div className="container mx-auto flex flex-col gap-10 px-4 py-12 md:flex-row md:items-center md:py-16">
-            <div className="flex-1 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-stone-400 bg-stone-50/80 px-3 py-1 text-[10px] text-stone-700">
-                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                <span>Locally owned • Detail-driven craftsmanship</span>
-              </div>
-
-              <div className="space-y-3">
-                <h1 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
-                  Carpentry, remodels &{" "}
-                  <span className="bg-gradient-to-r from-amber-800 to-orange-600 bg-clip-text text-transparent">
-                    custom woodwork
-                  </span>
-                  , built to last.
-                </h1>
-                <p className="max-w-xl text-sm leading-relaxed text-stone-700">
-                  From full remodels to small handyman projects, McLean
-                  Carpentry & Remodeling LLC brings a craftsman&apos;s eye for
-                  detail to every job—so your home feels solid, warm, and truly
-                  yours.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href="#contact"
-                  className="rounded-full bg-amber-700 px-5 py-2 text-xs font-semibold uppercase tracking-wide text-amber-50 shadow-sm hover:bg-amber-600"
-                >
-                  Request a free estimate
-                </a>
-                <a
-                  href="tel:5551234567" // TODO: phone
-                  className="rounded-full border border-stone-500 px-4 py-2 text-xs font-medium text-stone-800 hover:bg-stone-50"
-                >
-                  Or call: (555) 123-4567
-                </a>
-                <span className="text-[11px] text-stone-600">
-                  Serving homeowners in the local area.
-                </span>
-              </div>
-            </div>
-
-            {/* Right side: logo + project blurb */}
-            <div className="flex-1 space-y-4">
-              <div className="flex items-center justify-center">
-                <div className="relative h-40 w-40 md:h-48 md:w-48">
-                  <Image
-                    src="/logo/mclean-logo.png"
-                    alt="McLean Carpentry & Remodeling logo"
-                    fill
-                    className="object-contain drop-shadow-md"
-                  />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-stone-300 bg-stone-50 p-4 text-xs text-stone-800 shadow-sm">
-                <p className="font-semibold text-stone-900">
-                  “Don&apos;t just build… create!”
-                </p>
-                <p className="mt-1 text-stone-700">
-                  We specialize in warm, lived-in spaces with clean lines,
-                  natural wood, and thoughtful details—from trim and built-ins
-                  to full kitchen and bath remodels.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero/>
 
         {/* Services */}
         <section

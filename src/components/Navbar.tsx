@@ -24,12 +24,16 @@ export function Navbar() {
           </span>
         </Link>
 
+        {/* Desktop nav */}
         <div className="hidden items-center gap-8 text-sm text-stone-700 md:flex">
           <Link href="/services" className="hover:text-stone-900">
             Services
           </Link>
           <Link href="/our-work" className="hover:text-stone-900">
             Our work
+          </Link>
+          <Link href="/shop" className="hover:text-stone-900">
+            Shop
           </Link>
           <Link href="/about" className="hover:text-stone-900">
             About
@@ -47,11 +51,14 @@ export function Navbar() {
             Call now
           </a>
           <a
-            href="/contact"
+            href="https://mcleancarpentryremodelingllc.simplywise.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-amber-700 px-3.5 py-1.5 text-xs font-semibold text-amber-50 shadow-sm hover:bg-amber-600"
           >
             Request a quote
           </a>
+
         </div>
 
         {/* Mobile menu button */}
@@ -67,6 +74,7 @@ export function Navbar() {
         </button>
       </nav>
 
+      {/* Mobile nav */}
       {open && (
         <div className="border-t border-stone-300 bg-stone-50 md:hidden">
           <div className="container mx-auto flex flex-col gap-3 px-4 py-3 text-sm text-stone-800">
@@ -76,12 +84,16 @@ export function Navbar() {
             <Link href="/our-work" onClick={() => setOpen(false)}>
               Our work
             </Link>
+            <Link href="/shop" onClick={() => setOpen(false)}>
+              Shop
+            </Link>
             <Link href="/about" onClick={() => setOpen(false)}>
               About
             </Link>
             <Link href="/contact" onClick={() => setOpen(false)}>
               Contact
             </Link>
+
             <div className="mt-2 flex gap-3">
               <a
                 href="tel:5551234567" // TODO: real phone
@@ -90,7 +102,9 @@ export function Navbar() {
                 Call now
               </a>
               <a
-                href="/contact"
+                href="https://mcleancarpentryremodelingllc.simplywise.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 rounded-full bg-amber-700 px-3 py-1.5 text-xs font-semibold text-amber-50"
               >
                 Request a quote
