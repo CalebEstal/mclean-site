@@ -5,6 +5,7 @@ export default function AboutPage() {
   return (
     <div className="bg-stone-100 min-h-screen py-12">
       <div className="container mx-auto px-4 max-w-4xl space-y-10">
+        {/* Intro */}
         <div className="space-y-4">
           <h1 className="text-3xl font-bold text-stone-900">About Us</h1>
           <p className="text-stone-700 text-sm leading-relaxed">
@@ -15,14 +16,43 @@ export default function AboutPage() {
           </p>
         </div>
 
+        {/* Staff Image */}
+        <div className="rounded-2xl border border-stone-300 bg-white p-4 shadow-sm">
+          <div className="grid gap-6 md:grid-cols-2 md:items-center">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-stone-200">
+              <Image
+                src="/media/Guy.jpeg" // ← drop image here
+                alt="Owner / craftsman"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="text-xl font-semibold text-stone-900">
+                Meet the Craftsman
+              </h2>
+              <p className="text-sm text-stone-700 leading-relaxed">
+                When you hire McLean Carpentry & Remodeling, you work directly
+                with the person responsible for the quality of the work. No
+                revolving subcontractors. No miscommunication. Just skilled,
+                hands-on craftsmanship from start to finish.
+              </p>
+              <p className="text-sm text-stone-700 leading-relaxed">
+                This hands-on approach ensures accountability, attention to
+                detail, and results you can trust in your home.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Approach */}
         <div className="rounded-2xl border border-stone-300 bg-stone-50 p-6 shadow-sm space-y-4">
           <h2 className="text-xl font-semibold text-stone-900">Our Approach</h2>
           <p className="text-sm text-stone-700 leading-relaxed">
-            When you work with McLean Carpentry & Remodeling, you're not dealing
-            with a rotating crew of subcontractors — you’re working directly
-            with a craftsman who cares about the details. From the first
-            walkthrough to final cleanup, we focus on clarity, transparency, and
-            earning your trust.
+            From the first walkthrough to final cleanup, we focus on clarity,
+            transparency, and earning your trust.
           </p>
 
           <ul className="space-y-1 text-sm text-stone-700">
@@ -36,6 +66,7 @@ export default function AboutPage() {
           </ul>
         </div>
 
+        {/* Story */}
         <div className="rounded-2xl border border-stone-300 bg-stone-50 p-6 shadow-sm space-y-4">
           <h2 className="text-xl font-semibold text-stone-900">Our Story</h2>
           <p className="text-sm text-stone-700 leading-relaxed">
@@ -47,6 +78,7 @@ export default function AboutPage() {
           </p>
         </div>
 
+        {/* CTA */}
         <div className="text-center pt-4">
           <Link
             href="/contact"

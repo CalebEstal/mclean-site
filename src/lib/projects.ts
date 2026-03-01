@@ -48,6 +48,36 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "Kitchen Remodel",
+    folder: "Kitchen Remodel 2",
+    description:
+      "Bright, functional kitchen with new cabinets, counters, backsplash, and modern fixtures.",
+    images: [
+      "1.jpeg",
+      "2.jpeg",
+      "3.jpeg",
+      "4.jpeg",
+      "5.jpeg",
+      "6.jpeg",
+      "7.jpeg",
+      "8.jpeg",
+      "9.jpeg",
+      "10.jpeg",
+      "11.jpeg",
+      "12.jpeg",
+      "13.jpeg",
+      "14.jpeg",
+      "15.jpeg",
+    ],
+  },
+  {
+    name: "Custom Dresser",
+    folder: "Dresser",
+    description:
+      "Custom artisan dresser with saw cuts and warm craftsman finish.",
+    images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+  },
+  {
     name: "Bathroom Remodel",
     folder: "Bathroom Remodel",
     description:
@@ -85,11 +115,23 @@ export const projects: Project[] = [
     images: ["Bed 1.jpg", "Bed 2.jpg", "Bed 3.jpg"],
   },
   {
+    name: "Custom Bed",
+    folder: "Bed2",
+    description:
+      "Custom-built bed frame with warm wood tones and solid construction.",
+    images: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"],
+  },
+  {
     name: "Custom Crib",
     folder: "Crib",
     description:
       "Handcrafted crib designed for safety, durability, and a classic look.",
-    images: ["Crib.jpg", "Crib 2.jpg", "Crib finished.jpg"],
+    images: [
+      "Crib.jpg",
+      "Crib 2.jpg",
+      "Crib finished.jpg",
+      "Crib finished 2.jpeg",
+    ],
   },
   {
     name: "Deck Project",
@@ -117,6 +159,12 @@ export const projects: Project[] = [
       "Deck 18.jpg",
       "Deck 19.jpg",
     ],
+  },
+  {
+    name: "Decorative Wall Organizer",
+    folder: "Wall Organizer",
+    description: "Custom wood frame wall organzier",
+    images: ["1.jpeg"],
   },
   {
     name: "Entertainment Center",

@@ -45,7 +45,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="tel:5551234567" // TODO: real phone
+            href="tel:3098380007" // TODO: real phone
             className="rounded-full border border-amber-800/60 px-3 py-1.5 text-xs font-medium text-amber-900 hover:border-amber-800 hover:bg-amber-50"
           >
             Call now
@@ -58,7 +58,6 @@ export function Navbar() {
           >
             Request a quote
           </a>
-
         </div>
 
         {/* Mobile menu button */}

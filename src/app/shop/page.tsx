@@ -1,76 +1,83 @@
 // src/app/shop/page.tsx
 import Link from "next/link";
-import { shopifyFetch } from "@/lib/shopify";
 
-const PRODUCTS_QUERY = `
-  query Products {
-    products(first: 12) {
-      edges {
-        node {
-          id
-          handle
-          title
-          priceRange {
-            minVariantPrice {
-              amount
-            }
-          }
-          featuredImage {
-            url
-            altText
-          }
-        }
-      }
-    }
-  }
-`;
-
-export default async function ShopPage() {
-  const data = await shopifyFetch<any>({ query: PRODUCTS_QUERY });
-  const products = data.products.edges;
-
+export default function ShopPage() {
   return (
-    <main className="bg-neutral-50">
-      {/* Intro */}
-      <section className="max-w-7xl mx-auto px-6 pt-24 pb-20">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-semibold tracking-tight mb-4 text-neutral-900">
-            Shop
-          </h1>
-          <p className="text-neutral-600 leading-relaxed">
-            Custom furniture designed and built in our Central Illinois workshop.
-            Pricing includes freight shipping within the continental U.S.
+    <div className="bg-stone-100 min-h-screen py-12">
+      <div className="container mx-auto max-w-5xl px-4 space-y-10">
+        {/* Header */}
+        <div className="space-y-3">
+          <p className="text-xs uppercase tracking-widest text-stone-600">
+            Small batch • Made to order • Limited runs
+          </p>
+          <h1 className="text-3xl font-bold text-stone-900">Shop</h1>
+          <p className="text-sm text-stone-700 leading-relaxed max-w-2xl">
+            The online shop is launching soon. We build in small batches with
+            preorder windows so we can keep quality high and lead times clear.
           </p>
         </div>
-      </section>
 
-      {/* Grid */}
-      <section className="max-w-7xl mx-auto px-6 pb-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-24">
-          {products.map(({ node }: any) => (
-            <Link key={node.id} href={`/shop/${node.handle}`} className="group">
-              <div className="aspect-[4/5] bg-neutral-100 overflow-hidden mb-6">
-                {node.featuredImage && (
-                  <img
-                    src={node.featuredImage.url}
-                    alt={node.featuredImage.altText ?? node.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                )}
-              </div>
+        {/* CTA row */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href="https://mcleancarpentryremodelingllc.simplywise.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-amber-700 px-4 py-2 text-xs font-semibold text-amber-50 shadow-sm hover:bg-amber-600"
+          >
+            Join the waitlist / request a quote
+          </a>
 
-              <div className="space-y-1">
-                <h2 className="text-lg font-medium tracking-tight text-neutral-900">
-                  {node.title}
-                </h2>
-                <p className="text-sm text-neutral-600">
-                  ${node.priceRange.minVariantPrice.amount}
-                </p>
-              </div>
-            </Link>
-          ))}
+          <Link
+            href="/our-work"
+            className="inline-flex items-center justify-center rounded-full border border-amber-800/60 px-4 py-2 text-xs font-medium text-amber-900 hover:border-amber-800 hover:bg-amber-50"
+          >
+            View recent work
+          </Link>
         </div>
-      </section>
-    </main>
+
+        {/* Info cards */}
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-xl border border-stone-300 bg-stone-50 p-5">
+            <h2 className="text-sm font-semibold text-stone-900">
+              Limited releases
+            </h2>
+            <p className="mt-2 text-sm text-stone-700 leading-relaxed">
+              Each run is capped. When a batch sells out, the next release is
+              scheduled after the current build is complete.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-stone-300 bg-stone-50 p-5">
+            <h2 className="text-sm font-semibold text-stone-900">
+              Preorder windows
+            </h2>
+            <p className="mt-2 text-sm text-stone-700 leading-relaxed">
+              Preorders open for a short window so we can source lumber, mill
+              parts, and keep timelines predictable.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-stone-300 bg-stone-50 p-5">
+            <h2 className="text-sm font-semibold text-stone-900">
+              Premium custom work
+            </h2>
+            <p className="mt-2 text-sm text-stone-700 leading-relaxed">
+              Custom commissions are available at a higher price point and with
+              limited availability.
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom note */}
+        <div className="rounded-xl border border-stone-300 bg-white p-5">
+          <p className="text-sm text-stone-700 leading-relaxed">
+            Want first access to new drops? Use the waitlist link above. If you
+            have a specific piece in mind (size, wood species, finish), request
+            a quote and include your details.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
