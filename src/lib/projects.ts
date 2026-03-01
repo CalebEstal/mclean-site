@@ -29,22 +29,22 @@ export const projects: Project[] = [
     description:
       "Bright, functional kitchen with new cabinets, counters, backsplash, and modern fixtures.",
     images: [
-      "Kitchen 1.jpg",
-      "Kitchen 2.jpg",
-      "Kitchen 3.jpg",
-      "Kitchen 4.jpg",
-      "Kitchen 5.jpg",
-      "Kitchen 6.jpg",
-      "Kitchen 7.jpg",
-      "Kitchen 8.jpg",
-      "Kitchen 9.jpg",
-      "Kitchen 10.jpg",
-      "Kitchen 11.jpg",
-      "Kitchen 12.jpg",
-      "Kitchen 13.jpg",
-      "Kitchen 14.jpg",
-      "Kitchen 15.jpg",
-      "Kitchen 16.jpg",
+      "kitchen 1.jpg",
+      "kitchen 2.jpg",
+      "kitchen 3.jpg",
+      "kitchen 4.jpg",
+      "kitchen 5.jpg",
+      "kitchen 6.jpg",
+      "kitchen 7.jpg",
+      "kitchen 8.jpg",
+      "kitchen 9.jpg",
+      "kitchen 10.jpg",
+      "kitchen 11.jpg",
+      "kitchen 12.jpg",
+      "kitchen 13.jpg",
+      "kitchen 14.jpg",
+      "kitchen 15.jpg",
+      "kitchen 16.jpg",
     ],
   },
   {
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Bathroom Remodel 2",
+    name: "Bathroom Remodel",
     folder: "Bathroom Remodel 2",
     description:
       "Second bathroom remodel featuring new tile, shower, and updated finishes.",
@@ -171,14 +171,14 @@ export const projects: Project[] = [
     folder: "Entertainment Center",
     description:
       "Built-in entertainment center with storage, display space, and integrated trim.",
-    images: ["Entertainment center.jpg", "Entertainment center 2.jpg"],
+    images: ["entertainment center.jpg", "entertainment center 2.jpg"],
   },
   {
     name: "Fence Project",
     folder: "Fence Project",
     description:
       "Custom fence project for better privacy, security, and curb appeal.",
-    images: ["Fence 1.jpg", "Fence 2.jpg", "Fence 3.jpg", "Fence 4.jpg"],
+    images: ["fence 1.jpg", "fence 2.jpg", "fence 3.jpg", "fence 4.jpg"],
   },
   {
     name: "Laundry Room Remodel",
@@ -211,11 +211,11 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Bathroom (Matt)",
+    name: "Bathroom Remodel",
     folder: "Matt Bathroom",
     description:
       "Bathroom project with updated finishes and fixtures for a refreshed space.",
-    images: ["Matt Bathroom.jpg", "Matt Bathroom 2.jpg"],
+    images: ["Matt bathroom.jpg", "Matt bathroom 2.jpg"],
   },
   {
     name: "Porch Project",
